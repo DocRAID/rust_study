@@ -23,9 +23,23 @@ fn three(){
         }
     }
 }
+fn four(){
+    let a_number: Option<u8> = Some(7);
+    if let Some(7) = a_number {
+        println!("That's seven!!");
+    }
+}
+fn five(){
+    let gift = Some("candy");
+    assert_eq!(gift.unwrap(),"candy");
+    
+    assert_eq!(Some("dog").unwrap_or("cat"), "dog");
+    assert_eq!(None.unwrap_or("cat"), "cat");
+}
 fn main(){
     // one();
     // two();
-    three();
- 
+    // three();
+    // four();
+    five();
 }
