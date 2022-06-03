@@ -9,4 +9,7 @@ fn main(){
     let book:&str ="Book of name";
     reviews.remove(book);
     println!("\nReview for \'{}\' : {:?}",book,reviews.get(book));
+    for i in reviews{
+        println!("\nReview for \'{:?}\' : {:?} ",i.0,i.1);
+    }
 }

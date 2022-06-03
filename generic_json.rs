@@ -18,6 +18,11 @@ struct Dog {
     likes_petting: bool,
 }
 
+struct Cat {
+    name: String,
+    sharp_claws: bool,
+}
+
 impl AsJson for Person {
     fn as_json(&self) -> String {
 	    format!(
@@ -35,6 +40,14 @@ impl AsJson for Dog {
 	    )
     }
 }
+impl AsJson for Cat {
+    fn as_json(&self) -> String {
+        format!(
+            r#"{{ "type": "cat", "name": "{}", "charp_claws": {} }}"#,
+            self.name, self.sharp_claws
+        )
+    }
+}
 fn main(){
     let student = Person{
         name: String::from("Limdongju"),
@@ -46,6 +59,12 @@ fn main(){
         color: String::from("black"),
         likes_petting: true,
     };
+    let kitty = Cat {
+        name: String::from("Kitty"),
+        sharp_claws: false,
+    };
+
     send_data_as_json(&student);
     send_data_as_json(&김강현);
+    send_data_as_json(&kitty);
 }
