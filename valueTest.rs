@@ -4,4 +4,4 @@ fn main(){
     a=10;
     b=30;
     println!(a+b);
-}   
+}
