@@ -1,1 +1,1 @@
-D:\myCode\Rust\rust_study\greprs\target\debug\greprs.exe: D:\myCode\Rust\rust_study\greprs\src\main.rs
+C:\MyCodes\rust\greprs\target\debug\greprs.exe: C:\MyCodes\rust\greprs\src\main.rs
